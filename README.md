@@ -1,0 +1,1 @@
+Put these in a folder. You can name it "Star Citizen Helper" and then double click on the index.html file for it to open in your default browser. This runs locally on your desktop and you may read the code here before downloading. 
