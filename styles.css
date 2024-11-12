@@ -1,0 +1,162 @@
+/* Default Dark Mode Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: white; /* Light text */
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 100px; /* Space for the banner */
+  }
+  
+  h1, button, p {
+    color: white; /* Light text for headings and paragraphs */
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333; /* Dark background for buttons */
+    color: white; /* Light text for buttons */
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #555; /* Lighter shade for hover effect */
+  }
+  
+  input {
+    background-color: #333; /* Dark input background */
+    color: white; /* Light text for inputs */
+    border: 1px solid #555; /* Dark border for inputs */
+    padding: 8px;
+    margin: 5px;
+  }
+  
+  input:focus {
+    outline: none;
+    border: 1px solid #888; /* Lighter border when focused */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Styling for the result and cost texts */
+  #meritsResult, #meritsCost {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  /* Light Mode Styles */
+  body.light-mode {
+    background-color: #f1f1f1; /* Light background */
+    color: #121212; /* Dark text */
+  }
+  
+  body.light-mode h1, 
+  body.light-mode button, 
+  body.light-mode p {
+    color: #121212; /* Dark text for headings and paragraphs */
+  }
+  
+  body.light-mode button {
+    background-color: #f1f1f1;
+    color: #121212;
+    border: 1px solid #ccc;
+  }
+  
+  body.light-mode button:hover {
+    background-color: #ddd;
+  }
+  
+  body.light-mode input {
+    background-color: #f9f9f9;
+    color: #121212;
+    border: 1px solid #ccc;
+  }
+  
+  body.light-mode input:focus {
+    border: 1px solid #888;
+  }
+  
+  /* Dark Mode Toggle Styles */
+  .switch-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+  }
+  
+  .switch-container p {
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .switch {
+    display: inline-block;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+  }
+  
+  /* When the checkbox is checked, move the slider */
+  input:checked + .slider {
+    background-color: #4CAF50;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  /* Styling for the GIF Banner */
+  .gif-banner {
+    display: flex;
+    justify-content: center; /* Center the GIF */
+    width: 100%; /* Ensure it spans the width of the screen */
+    margin-top: 50px; /* Add space between content and GIF */
+    margin-bottom: 20px; /* Optional: space between GIF and the bottom of the page */
+  }
+  
+  .gif-banner img {
+    max-width: 100%; /* Ensure the image doesn't overflow the container */
+    height: auto;
+    width: 100%; /* The image will now scale to fit the container */
+    max-width: 1080px; /* Optional: set max width for control over size */
+  }
+  

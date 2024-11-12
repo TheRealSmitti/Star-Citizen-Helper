@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Citizen Helper</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Starting Page -->
+    <div id="homePage">
+      <h1>Star Citizen Helper</h1>
+      <button onclick="navigateTo('meritsPage')">Merits Calculator</button>
+      <button onclick="navigateTo('creditsPage')">Credits Splitter</button>
+    </div>
+
+    <!-- Merits Page -->
+    <div id="meritsPage" class="hidden">
+      <h1>Merits Calculator</h1>
+      <button onclick="navigateTo('homePage')">Back to Home</button>
+
+      <!-- Form to Enter Time -->
+      <div>
+        <label for="hours">Hours:</label>
+        <input type="number" id="hours" placeholder="H" min="0">
+        <label for="minutes">Minutes:</label>
+        <input type="number" id="minutes" placeholder="M" min="0">
+        <label for="seconds">Seconds:</label>
+        <input type="number" id="seconds" placeholder="S" min="0">
+        <button onclick="calculateMerits()">Calculate Merits</button>
+      </div>
+
+      <!-- Display the Result -->
+      <p id="meritsResult"></p>
+      <p id="meritsCost"></p>
+    </div>
+
+    <!-- Credits Page -->
+    <div id="creditsPage" class="hidden">
+      <h1>Credits Splitter</h1>
+      <button onclick="navigateTo('homePage')">Back to Home</button>
+
+      <!-- Form to Enter Total Credits and Number of Players -->
+      <div>
+        <label for="totalCredits">Total Credits:</label>
+        <input type="number" id="totalCredits" placeholder="Total Credits" min="1">
+      </div>
+      
+      <div>
+        <label for="totalPlayers">Total Players (including sender):</label>
+        <input type="number" id="totalPlayers" placeholder="Total Players" min="2">
+      </div>
+      
+      <button onclick="calculateCreditSplit()">Calculate Split</button>
+      
+      <!-- Display the Result -->
+      <p id="splitResult"></p>
+    </div>
+  </div>
+
+  <!-- Dark Mode Toggle and Banner -->
+  <div class="switch-container">
+    <p>Toggle Dark Mode</p>
+    <label class="switch">
+      <input type="checkbox" onclick="toggleDarkMode()">
+      <span class="slider"></span>
+    </label>
+  </div>
+  <div class="gif-banner">
+    <img src="Full1080Banner.gif" alt="Star Citizen Banner">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
