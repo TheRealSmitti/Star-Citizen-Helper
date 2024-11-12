@@ -38,13 +38,14 @@ function calculateCreditSplit() {
     const S = Math.floor(totalCredits - (totalPlayers-1)*(totalCredits/(totalPlayers-taxRate)))
     const senderAmount = Math.floor(S)
     const receiverAmount = Math.floor(A)
+    const loss = Math.ceil(receiverAmount*(totalPlayers-1)*.005)
 
 
 
     // Display the result in the HTML (or modify as needed)
     document.getElementById('splitResult').innerHTML = 
-        `Each player receives: ${receiverAmount} credits<br>` +
-        `Sender loses: ${senderAmount*totalPlayers} credits`;
+        `Each Player Receives: ${receiverAmount} Credits<br>` +
+        `Cumulative Tax Loss: ${loss} Credits`;
 }
 
 
